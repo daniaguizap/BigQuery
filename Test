@@ -1,0 +1,25 @@
+# **Upload the data to Colab**
+
+import pandas as pd
+
+df_costs = pd.read_csv("/content/costs.csv")
+
+df_costs.head()
+
+df_profiles = pd.read_csv("/content/profiles.csv")
+
+df_profiles.head()
+
+df_verification = pd.read_csv("/content/verification.csv")
+
+df_verification.head()
+
+# **Nulls and Duplicates verification**
+
+df_costs.info()
+
+df_costs.isnull().sum()
+
+df_costs.duplicated().value_counts()
+
+df_profiles.info()
